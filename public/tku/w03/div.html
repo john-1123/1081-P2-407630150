@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Div Demo</title>
+    <style>
+      body {
+        width: 90%;
+        margin: 10px auto;
+      }
+      #heading {
+        height: 100px;
+        width: 100%;
+        background-color: darkcyan;
+        text-align: center;
+      }
+      #menu {
+        height: 400px;
+        width: 20%;
+        background-color: darkturquoise;
+        float: left;
+      }
+      #section {
+        height: 400px;
+        width: 80%;
+        background-color: rgb(152, 230, 230);
+        float: right;
+      }
+      #footer {
+        height: 70px;
+        width: 100%;
+        background-color: darkgray;
+      }
+      .clearfix {
+        clear: both;
+      }
+      nav ul li {
+        list-style-type: none;
+        float: left;
+        margin: 5px;
+        font-size: 15px;
+      }
+      #heading nav ul {
+        padding: 0px;
+      }
+      #heading nav a {
+        background-color: darksalmon;
+        padding: 5px;
+      }
+      #heading nav a:hover {
+        background-color: crimson;
+      }
+    </style>
+    <script>
+      function changeColor(index) {
+        const p = document.getElementById("section");
+        //console.log(p);
+        switch (index) {
+          case 1:
+            p.style.backgroundColor = "yellow";
+            break;
+          case 2:
+            p.style.backgroundColor = "azure";
+            break;
+          case 3:
+            p.style.backgroundColor = "cornflowerblue";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="heading">
+      <p>Heading</p>
+      <nav>
+        <ul>
+          <li onclick="changeColor(1)"><a href="#">Link1</a></li>
+          <li onclick="changeColor(2)"><a href="#">Link2</a></li>
+          <li onclick="changeColor(3)"><a href="#">Link3</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="menu"></div>
+    <div id="section"></div>
+    <div class="clearfix"></div>
+    <div id="footer"></div>
+  </body>
+</html>
